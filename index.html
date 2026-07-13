@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pick Up Games</title>
+  <meta name="description" content="Pick Up Games — independent game studio. Creators of Gravity Shift.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0b0e1a;
+      --surface: #141a2e;
+      --text: #e8ecf7;
+      --muted: #8b93ad;
+      --accent: #ffb54d;
+    }
+
+    body {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Subtle star field */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,.5), transparent),
+        radial-gradient(1px 1px at 70% 15%, rgba(255,255,255,.35), transparent),
+        radial-gradient(1.5px 1.5px at 85% 60%, rgba(255,255,255,.4), transparent),
+        radial-gradient(1px 1px at 35% 75%, rgba(255,255,255,.3), transparent),
+        radial-gradient(1px 1px at 55% 45%, rgba(255,255,255,.45), transparent),
+        radial-gradient(1.5px 1.5px at 10% 85%, rgba(255,255,255,.3), transparent),
+        radial-gradient(1px 1px at 90% 90%, rgba(255,255,255,.4), transparent);
+      pointer-events: none;
+    }
+
+    main {
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 8vw, 3.2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 56px;
+    }
+
+    .game-card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 40px;
+    }
+
+    .game-card h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .game-card p {
+      color: var(--muted);
+      font-size: .95rem;
+      margin-bottom: 24px;
+    }
+
+    .btn-play {
+      display: inline-block;
+      background: var(--accent);
+      color: #1a1305;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: .95rem;
+      text-decoration: none;
+      padding: 13px 28px;
+      border-radius: 10px;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .btn-play:hover,
+    .btn-play:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 181, 77, .3);
+    }
+    .btn-play:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    footer a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 181, 77, .4);
+      padding-bottom: 1px;
+    }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Pick Up Games</h1>
+    <p class="tagline">Independent game studio</p>
+
+    <section class="game-card">
+      <h2>Gravity Shift</h2>
+      <p>Navigate through space using planetary gravity to your advantage.</p>
+      <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.pickupgames.gravityshift">
+        Get it on Google Play
+      </a>
+    </section>
+
+    <footer>
+      Contact: <a href="mailto:francow.correia@gmail.com">francow.correia@gmail.com</a>
+    </footer>
+  </main>
+</body>
+</html>
